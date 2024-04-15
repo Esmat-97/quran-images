@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <button >Next</button>
+    <br>
+    <br>
+    <br>
+    <img src="./" id="image">
+    <script>
+        let fileNames = [];
+
+        for (let i = 1; i <= 604; i++) {
+            fileNames.push(i + '.png');
+        }
+
+        let currentIndex = 0;
+
+        function displayNextImage() {
+            if (currentIndex < fileNames.length) {
+                document.getElementById('image').src = fileNames[currentIndex];
+                currentIndex++;
+            }
+        }
+
+        document.querySelector('button').onclick=displayNextImage;
+    </script>
+</body>
+
+</body>
+</html>
