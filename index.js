@@ -5,11 +5,15 @@ for (let i = 1; i <= 604; i++) {
   
 }
 
-document.getElementById('image').src = fileNames[0];
 
 
+function getpage(){
 
-let currentIndex = 0;
+ let a=document.getElementById('page').value;
+ document.querySelector('p').innerHTML=`${a}`;
+ document.getElementById('image').src = fileNames[a];
+
+let currentIndex = a;
 
 function displayNextImage() {
     if (currentIndex < fileNames.length - 1 ) {
@@ -27,6 +31,11 @@ function displayPreviousImage() {
         document.querySelector('p').innerHTML=`${currentIndex}`;
     }
 }
-
 document.getElementById('next').onclick=displayNextImage;
 document.getElementById('previous').onclick=displayPreviousImage;
+
+}
+
+
+document.getElementById('getpage').onclick=getpage;
+
