@@ -17,8 +17,8 @@ let currentIndex = a;
 
 function displayNextImage() {
     if (currentIndex < fileNames.length - 1 ) {
-        document.getElementById('image').src = fileNames[currentIndex];
         currentIndex++;
+        document.getElementById('image').src = fileNames[currentIndex];
         document.querySelector('p').innerHTML=`${currentIndex}`;
     }
 }
@@ -26,8 +26,8 @@ function displayNextImage() {
 
 function displayPreviousImage() {
     if (currentIndex > 0) {
-        document.getElementById('image').src = fileNames[currentIndex];
         currentIndex--;
+        document.getElementById('image').src = fileNames[currentIndex];
         document.querySelector('p').innerHTML=`${currentIndex}`;
     }
 }
